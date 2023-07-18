@@ -1,0 +1,89 @@
+
+
+
+### Create New dept
+
+POST http://localhost:8080/company/dept HTTP/1.1 
+content-type: application/json
+
+{
+
+"deptName" : "IT"
+
+}
+
+
+### Create New role
+
+POST http://localhost:8080/company/role HTTP/1.1 
+content-type: application/json
+
+{
+
+"roleName" : "Admin", 
+"experience" : 12,
+"location":"mumbai"
+}
+
+### Create New role on basis of deptId
+
+POST http://localhost:8080/company/2/role HTTP/1.1 
+content-type: application/json
+
+{
+
+"roleName" : "java developer", 
+"experience" : 12,
+"location":"mumbai"
+}
+
+
+### Create New Application
+
+
+POST http://localhost:8080/company/application HTTP/1.1 
+content-type: application/json
+
+{
+
+"name" : "e", 
+"email":"ram@gmail.com",
+"contactNo" : 78945122, 
+"totalExp" : 12,
+"currentCtc":120000,
+"expectedCtc":200000,
+"skills":"dfbdgbd"
+}
+
+### Create New Application on basis of role
+
+
+POST http://localhost:8080/company/3/employee HTTP/1.1 
+content-type: application/json
+
+{
+
+"name" : "e", 
+"email":"ram@gmail.com",
+"contactNo" : 78945122, 
+"totalExp" : 12,
+"currentCtc":120000,
+"expectedCtc":200000,
+"skills":"dfbdgbd"
+}
+
+### Get All dept 
+GET http://localhost:8080/company/getdept
+
+
+### Get All Employee 
+GET http://localhost:8080/company/getemployee
+
+### Get All Role 
+GET http://localhost:8080/company/getroles
+
+### Get All role by dept
+GET http://localhost:8080/company/getrole/1
+
+### Get All Employee by role
+GET http://localhost:8080/company/getEmp/3
